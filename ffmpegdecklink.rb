@@ -1,4 +1,4 @@
-class Ffmpegdecklink < Formula
+class ffmdl < Formula
   desc "FFmpeg with --enable-decklink"
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-5.1.4.tar.xz"
@@ -51,6 +51,7 @@ class Ffmpegdecklink < Formula
       --disable-htmlpages
       --disable-libjack
       --disable-indev=jack
+      --disable-x86asm
     ]
 
     args << "--enable-neon" if OS.mac? && Hardware::CPU.arm?
